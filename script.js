@@ -31,6 +31,7 @@ function setAlarm(e) {
     const alarm = document.getElementById('meetingtime');
     let alarmDate = new Date(meetingtime.value);
     let now = new Date();
+    
 
     let timetoalarm = alarmDate - now;
     console.log(timetoalarm)
@@ -45,6 +46,9 @@ function setAlarm(e) {
             document.getElementById('form').addEventListener('click', function(){
                 audio.pause();
                 show('success', 'Your alarm have been successfully paused')
+                setTimeout(() => {
+                    location.reload();
+                }, 5000);
             })
 
         }, timetoalarm);

@@ -43,7 +43,7 @@ function setAlarm(e) {
 
         setInterval(() => {
             document.getElementById('alarmSubmit').innerText = `Pause`
-            document.getElementById('form').addEventListener('click', function(){
+            document.getElementById('alarmSubmit').addEventListener('click', function(){
                 audio.pause();
                 show('success', 'Your alarm have been successfully paused')
                 setTimeout(() => {
